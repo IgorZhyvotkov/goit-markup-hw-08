@@ -1,0 +1,86 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: var(--dark-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    max-width: 480px;
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero_480-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero_480@2x-min.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1599px) {
+    max-width: 768px;
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero_768-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero_768@2x-min.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero_1600-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero_1600@2x-min.jpg);
+    }
+  }
+}
+.hero__container {
+  @extend .container;
+}
+.hero__title {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  color: var(--taxt-on-bg);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1600px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+.hero__button,
+.mailing-button {
+  @extend .button;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: #188ce8;
+}

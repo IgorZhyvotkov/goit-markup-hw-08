@@ -1,0 +1,85 @@
+body {
+  background-color: var(--taxt-on-bg);
+  color: var(--main-text-color);
+  font-family: var(--first-text);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1600px) {
+    width: 1600px;
+    padding-left: 215px;
+    padding-right: 215px;
+  }
+}
+.section {
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1600px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.image {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--second-text);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  background-color: var(--accent-color);
+  color: var(--taxt-on-bg);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color var(--transition-option);
+}
+
+.tittle {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
