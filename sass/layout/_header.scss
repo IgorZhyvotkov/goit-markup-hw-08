@@ -10,18 +10,18 @@
   @extend .logo;
   @extend .link;
   color: var(--logo-black);
-  @media screen and (min-width: 480px) and (max-width: 1599px) {
+  @media screen and (min-width: $mobile) and (max-width: 1599px) {
     font-size: 24px;
     line-height: 1.38;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin-right: 88px;
   }
   @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 93px;
   }
 }
@@ -34,7 +34,7 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  margin-left: 276px;
+  margin-left: auto;
   border: none;
   background-color: transparent;
   z-index: 100500;
@@ -51,7 +51,7 @@
   &:focus {
     fill: var(--accent-color);
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -68,10 +68,17 @@
   &.is-open {
     display: block;
   }
+  @media screen and (max-width: 479px) {
+    height: 615px;
+  }
+
 }
 .burger-nav {
   @extend .list;
   margin-bottom: 306px;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 150px;   
+  }
   &__item {
     margin-bottom: 32px;
   }
@@ -81,6 +88,10 @@
     font-size: 40px;
     line-height: 1.17;
     color: var(--secondary-text-color);
+    @media screen and (max-width: 479px) {
+      font-size: 35px;
+      line-height: 1.16;
+    }
   }
   &__link:hover,
   &__link:focus {
@@ -105,13 +116,27 @@
     line-height: 1.17;
     color: var(--accent-color);
   }
+  @media screen and (max-width: 479px) {
+    &__link--tel {
+      font-size: 27px;
+    }
+  }
 }
 .burger-web {
   @extend .list;
   display: flex;
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   &__item {
     padding: 0 10px;
+
     border-left: 1px solid rgba(33, 33, 33, 0.2);
+    @media screen and (max-width: 451px) {     
+      padding-bottom: 10px;
+      border: none;
+    }
   }
   &__item:first-child {
     padding-left: 0;

@@ -10,24 +10,24 @@
 }
 .team-list {
   @extend .list;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     
   }
-  @media screen and (min-width: 767px) and (max-width: 1599px) {
+  @media screen and (min-width:  $tablet) and (max-width: 1599px) {
     margin: -15px;
   }
 }
 .team-list__border {
-  @media screen and (min-width: 767px) and (max-width: 1599px) {
+  @media screen and (min-width:  $tablet) and (max-width: 1599px) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width:  $tablet) {
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width:  $desktop) {
     margin-left: 30px;
     &:nth-child(1) {
       margin-left: 0;
@@ -44,6 +44,7 @@
 }
 .team-list__image {
   @extend .image;
+  
 }
 .team-text {
   padding-top: 30px;
@@ -93,3 +94,4 @@
 .team-networks__icon {
   fill: currentColor;
 }
+

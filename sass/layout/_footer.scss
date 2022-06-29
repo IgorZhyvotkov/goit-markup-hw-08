@@ -6,24 +6,22 @@
 }
 .page-footer__container {
   @extend .container;
-
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1599px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: baseline;
   }
 }
 .footer {
-  @media screen and (min-width: 480px) and (max-width: 1599px) {
+  @media screen and (min-width: 320px) and (max-width: 1599px) {
     text-align: center;
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1599px) {
     margin-right: 165px;
   }
 }
@@ -65,10 +63,9 @@
   font-style: normal;
   display: inline-block;
   transition: color var(--transition-option);
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     width: 231px;
   }
-  
 }
 .address-list__link--map {
   color: var(--taxt-on-bg);
@@ -79,11 +76,11 @@
   cursor: pointer;
 }
 .footer-icon-position {
-  @media screen and (min-width: 480px) and (max-width: 1599px) {
+  @media screen and (min-width: 320px) and (max-width: 1599px) {
     text-align: center;
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 70px;
   }
 }
@@ -100,7 +97,7 @@
 .footer-icons-list {
   @extend .list;
   display: flex;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 320px) {
     justify-content: center;
   }
 }
@@ -120,7 +117,6 @@
   border-radius: 50%;
   background-color: var(--footer-icon-bg);
   color: var(--taxt-on-bg);
-
   transition: background-color var(--transition-option);
 }
 .footer-icons-list__link:hover,
@@ -131,39 +127,37 @@
 .footer-icons-list__icon {
   fill: currentColor;
 }
-
 .footer-form {
   display: flex;
-
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 320px) {
     justify-content: center;
   }
-
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 93px;
   }
   @media screen and (max-width: 1599px) {
     text-align: center;
     flex-wrap: wrap;
-    max-width: 480px;
+    max-width: $mobile;
   }
 }
 .footer-form__mailing {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1599px) {
     margin-bottom: 20px;
   }
-
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 12px;
   }
 }
 .footer-form__mail-label {
   margin: 0;
   padding-bottom: 20px;
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -178,11 +172,11 @@
   border-radius: 4px;
   color: var(--taxt-on-bg);
   transition: border-color var(--transition-option);
-
-  @media screen and (min-width: 480px) and (max-width: 1599px) {
-    margin-bottom: 20px;
+  @media screen and (max-width: 479px) {
+    width: 90vw;
   }
-  @media screen and (min-width: 1600px) {
+  
+  @media screen and (min-width: $desktop) {
     width: 358px;
   }
 }
@@ -196,8 +190,11 @@
 .footer-form__mailing-button {
   @extend .button;
   display: flex;
-  align-self: flex-end;
+  align-self: center;
   padding: 10px 28px;
+  @media screen and (min-width: 1600px) {
+    align-self: flex-end;
+  }
 }
 .footer-form__mailing-button:hover,
 .footer-form__mailing-button:focus {

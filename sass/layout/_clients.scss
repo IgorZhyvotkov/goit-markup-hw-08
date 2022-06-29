@@ -9,24 +9,28 @@
 }
 .clients-list {
   @extend .list;
-  display: flex;
-  @media screen and (min-width: 480px) and (max-width: 1599px) {
+ 
+  @media screen and (min-width: $mobile) and (max-width: 1599px) {
     flex-wrap: wrap;
     margin: -15px;
   }
+  @media screen and (min-width: $mobile) {
+    display: flex;
+  }
 }
 .clients-list__item {
-  @media screen and (min-width: 480px) and (max-width: 1599px){
+  @media screen and (max-width: 478px) {
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: 1599px){
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
-  
-
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1599px) {
     width: calc((100% - 3 * 30px) / 3);
     margin: 15px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 30px;
     &:nth-child(1) {
       margin-left: 0;
@@ -43,7 +47,7 @@
   justify-content: center;
   color: var(--icon-color);
   transition: border var(--transition-option), color var(--transition-option);
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     width: 170px;
   }
 }

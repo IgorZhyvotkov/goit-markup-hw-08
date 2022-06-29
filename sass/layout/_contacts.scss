@@ -15,7 +15,7 @@
       margin-bottom: 0;
     }
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 50px;
     &:nth-child(1) {
       margin-left: 0;
@@ -32,11 +32,11 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color var(--transition-option);
-  @media screen and (min-width: 768px) and (max-width: 1599px){
+  @media screen and (min-width: $tablet) and (max-width: 1599px){
     font-size: 12px;
     line-height: 1.16;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
