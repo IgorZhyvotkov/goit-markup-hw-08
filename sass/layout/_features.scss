@@ -13,7 +13,7 @@
 .features-list {
   @extend .list;
   padding: 0;
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -38,7 +38,7 @@
 }
 
 .features-list__item {
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }

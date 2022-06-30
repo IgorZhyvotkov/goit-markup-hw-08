@@ -6,7 +6,7 @@
 }
 .page-footer__container {
   @extend .container;
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,11 +17,11 @@
   }
 }
 .footer {
-  @media screen and (min-width: 320px) and (max-width: 1599px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
     margin-bottom: 60px;
   }
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-right: 165px;
   }
 }
@@ -76,7 +76,7 @@
   cursor: pointer;
 }
 .footer-icon-position {
-  @media screen and (min-width: 320px) and (max-width: 1599px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
     margin-bottom: 60px;
   }
@@ -138,7 +138,7 @@
   @media screen and (min-width: $desktop) {
     margin-left: 93px;
   }
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
     flex-wrap: wrap;
     max-width: $mobile;
@@ -147,7 +147,7 @@
 .footer-form__mailing {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
   @media screen and (min-width: $desktop) {
@@ -192,7 +192,7 @@
   display: flex;
   align-self: center;
   padding: 10px 28px;
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: $desktop) {
     align-self: flex-end;
   }
 }

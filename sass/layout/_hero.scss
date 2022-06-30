@@ -20,7 +20,7 @@
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_480@2x-min.jpg);
     }
   }
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     max-width: 768px;
     height: 400px;
     padding-top: 118px;
@@ -66,7 +66,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   @media screen and (min-width: $desktop) {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }

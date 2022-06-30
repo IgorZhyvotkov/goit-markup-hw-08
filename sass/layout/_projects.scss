@@ -10,11 +10,11 @@
 .projects-list {
   @extend .list;
   margin-bottom: 50px;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 320px) {
     display: flex;
     justify-content: center;
   }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: start;
     padding-right: 88px;
@@ -22,7 +22,8 @@
 }
 .projects-list__item {
   @media screen and (max-width: 479px) {
-    margin: 8px;
+    margin-left: 8px;
+    margin-bottom: 15px;
   }
   @media screen and (min-width: 480px) {
     margin-left: 8px;
@@ -55,9 +56,6 @@
   letter-spacing: inherit;
   transition: background-color var(--transition-option), color var(--transition-option),
     box-shadow var(--transition-option);
-  @media screen and (max-width: 479px) {
-    width: 100%;
-  }
 }
 .projects-list__button:hover,
 .projects-list__button:focus {
@@ -138,7 +136,7 @@
   border-top: none;
 }
 .projects-grid__text--first {
-  @media screen and (min-width: $tablet) and (max-width: 1599px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     padding-bottom: 56px;
   }
 }

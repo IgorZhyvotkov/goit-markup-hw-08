@@ -11,16 +11,15 @@
 .team-list {
   @extend .list;
   @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: flex;    
   }
-  @media screen and (min-width:  $tablet) and (max-width: 1599px) {
+  @media screen and (min-width:  $tablet) and (max-width: 1199px) {
     margin: -15px;
+    flex-wrap: wrap;
   }
 }
 .team-list__border {
-  @media screen and (min-width:  $tablet) and (max-width: 1599px) {
+  @media screen and (min-width:  $tablet) and (max-width: 1199px) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }

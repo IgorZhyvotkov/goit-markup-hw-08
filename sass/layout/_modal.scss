@@ -31,7 +31,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--backdrop-opacity);
-
   @media screen and (min-width: $tablet) {
     width: 450px;
     height: 609px;
@@ -46,6 +45,10 @@
   }
   @media screen and (max-width: 479px) {
     max-width: 320px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .form__modal-button {

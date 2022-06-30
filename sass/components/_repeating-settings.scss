@@ -20,16 +20,12 @@ body {
   }
   @media screen and (min-width: 480px) {
     width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
   }
-  @media screen and (min-width: 1600px) {
-    width: 1600px;
-    padding-left: 215px;
-    padding-right: 215px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 .section {
@@ -37,7 +33,7 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }

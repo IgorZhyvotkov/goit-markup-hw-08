@@ -1,16 +1,21 @@
 .page-header {
   border-bottom: var(--border-header);
   position: relative;
+  @media screen and (max-width: 767px) {
+    display: block;
+    max-width: 767px;
+  }
 }
 .paje-header__container {
   @extend .container;
   @extend .flex-centered;
+  position: relative;
 }
 .paje-header__logo {
   @extend .logo;
   @extend .link;
   color: var(--logo-black);
-  @media screen and (min-width: $mobile) and (max-width: 1599px) {
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
     font-size: 24px;
     line-height: 1.38;
   }
@@ -55,6 +60,9 @@
     display: none;
   }
 }
+body.is-open {
+  overflow: hidden;
+}
 .phone-menu {
   z-index: 1;
   display: none;
@@ -63,21 +71,29 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 796px;
+  height: 100vh;
   background-color: var(--taxt-on-bg);
+  overflow-y: scroll;
   &.is-open {
     display: block;
   }
   @media screen and (max-width: 479px) {
-    height: 615px;
+    &.is-open {
+      display: flex;
+    }
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
   }
-
 }
+
 .burger-nav {
   @extend .list;
-  margin-bottom: 306px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 305px;
+  }
   @media screen and (max-width: 479px) {
-    margin-bottom: 150px;   
+    margin-bottom: auto;
   }
   &__item {
     margin-bottom: 32px;
@@ -97,14 +113,23 @@
   &__link:focus {
     color: var(--accent-color);
   }
+  &__link--curent {
+    color: var(--accent-color);
+  }
 }
 .burger-contacts {
   @extend .list;
   margin-bottom: 64px;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 35px;
+  }
+
   &__item {
     margin-bottom: 32px;
   }
-
+  &__item:last-child {
+    margin-bottom: 0;
+  }
   &__link {
     @extend .link;
     font-weight: 500;
@@ -122,6 +147,7 @@
     }
   }
 }
+
 .burger-web {
   @extend .list;
   display: flex;
@@ -133,15 +159,25 @@
     padding: 0 10px;
 
     border-left: 1px solid rgba(33, 33, 33, 0.2);
-    @media screen and (max-width: 451px) {     
-      padding-bottom: 10px;
-      border: none;
+    @media screen and (max-width: 358px) {
+      margin-bottom: 10px;
     }
   }
-  &__item:first-child {
+  &__item--inst {
     padding-left: 0;
     border: none;
   }
+  &__item--face {
+    @media screen and (max-width: 357px) {
+      border: none;
+    }
+  }
+  &__item--linked {
+    @media screen and (min-width: 359px)  and (max-width: 450px) {
+      border: none;
+    }
+  }
+
   &__link {
     @extend .link;
     font-weight: 500;
