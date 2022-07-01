@@ -77,7 +77,7 @@ body.is-open {
   &.is-open {
     display: block;
   }
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     &.is-open {
       display: flex;
     }
@@ -89,10 +89,7 @@ body.is-open {
 
 .burger-nav {
   @extend .list;
-  @media screen and (min-width: 480px) {
-    margin-bottom: 305px;
-  }
-  @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
     margin-bottom: auto;
   }
   &__item {

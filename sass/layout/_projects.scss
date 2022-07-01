@@ -9,7 +9,7 @@
 }
 .projects-list {
   @extend .list;
-  margin-bottom: 50px;
+
   @media screen and (min-width: 320px) {
     display: flex;
     justify-content: center;
@@ -17,28 +17,32 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: start;
-    padding-right: 88px;
+    margin-bottom: 40px;
+    margin-left: -8px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 .projects-list__item {
-  @media screen and (max-width: 479px) {
-    margin-left: 8px;
+  margin-left: 8px;
+  
+@media screen and (min-width: 320px) and (max-width: 390px) {
+  margin-bottom: 15px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+  @media screen and (min-width: 391px) and (max-width: 767px) {
     margin-bottom: 15px;
-  }
-  @media screen and (min-width: 480px) {
-    margin-left: 8px;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    &:nth-child(-n + 3) {
-      margin-bottom: 15px;
-    }
-    &:nth-last-child(2) {
-      margin-left: 0;
-    }
-  }
+    &:nth-last-child(-n + 2){
+      margin-bottom: 0;
+   }
+}
+
 }
 .projects-list__button {
   border-radius: 4px;
@@ -70,6 +74,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+    justify-content: center;
   }
 }
 .projects-grid__item {

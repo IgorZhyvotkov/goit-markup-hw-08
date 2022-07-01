@@ -19,11 +19,11 @@
   }
 }
 .clients-list__item {
-  @media screen and (max-width: 478px) {
+  @media screen and (max-width: 479px) {
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 250px;
+    max-width: 210px;
   }
   @media screen and (min-width: $mobile) and (max-width: 1199px){
     width: calc((100% - 2 * 30px) / 2);

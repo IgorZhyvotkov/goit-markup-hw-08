@@ -9,7 +9,7 @@
   opacity: 1;
   transition: opacity var(--backdrop-opacity);
   overflow-y: scroll;
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     z-index: 100501;
   }
   @media screen and (min-width: $mobile) {
@@ -31,9 +31,20 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--backdrop-opacity);
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 479px) {
+    width: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $mobile) {
     width: 450px;
     height: 609px;
+    margin-left: auto;
+    margin-right: auto;  
+  }
+  @media screen and (min-width: $tablet) {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -42,14 +53,9 @@
   @media screen and (min-width: $desktop) {
     width: 528px;
     height: 581px;
+   
   }
-  @media screen and (max-width: 479px) {
-    max-width: 320px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
 }
 .form__modal-button {
   display: flex;
@@ -159,6 +165,10 @@
   @media screen and (max-width: 479px) {
     margin-left: 3px;
     width: 25px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    margin-left: 4px;
+    width: 18px;
   }
 }
 .check-label__checkbox:checked + .check-label__icon {
